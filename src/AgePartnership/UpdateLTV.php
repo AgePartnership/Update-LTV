@@ -13,11 +13,17 @@ namespace AgePartnership;
  *
  */
 
+require_once(__DIR__ . '/../../vendor/autoload.php');
+
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+
 class UpdateLTV
 {
-    public function openSpreadsheet()
+    public function openSpreadsheet($fileName)
     {
-        return(null);
+        $reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader('Xlsx');
+        $spreadsheet = $reader->load($fileName);
+        return($spreadSheet);
     }
 
     public function parseSpreadsheet()
