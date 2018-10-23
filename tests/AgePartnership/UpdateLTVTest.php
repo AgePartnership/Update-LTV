@@ -9,28 +9,26 @@ use AgePartnership\UpdateLTV;
 
 class UpdateLTVTest extends TestCase
 {
-    public function setUp()
-    {
-        $updateLTV = new UpdateLTV;
-    }
-
     public function testOpenSpreadsheet()
     {
-        $spreadSheet = $updateLTV->openSpreadsheet;
+        $updateLTV = new UpdateLTV;
+        $spreadSheet = $updateLTV->openSpreadsheet(__DIR__ . '/../testCases/Max-LTV.XLSX');
 
         $this->assertEquals(0, 1);
     }
 
     public function testParseSpreadsheet()
     {
-        $test = $updateLTV->parseSpreadsheet;
+        $updateLTV = new UpdateLTV;
+        $test = $updateLTV->parseSpreadsheet();
 
         $this->assertEquals(0, 1);
     }
 
     public function testOverwriteLTV()
     {
-        $test = $updateLTV->overwriteLTV;
+        $updateLTV = new UpdateLTV;
+        $test = $updateLTV->overwriteLTV();
 
         $this->assertEquals(0, 1);
     }
