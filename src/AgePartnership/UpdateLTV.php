@@ -15,8 +15,18 @@ namespace AgePartnership;
 
 class UpdateLTV
 {
-    public function test()
+    public function openSpreadsheet()
     {
-        return('test');
+        return(null);
+    }
+
+    public function parseSpreadsheet()
+    {
+        return(null);
+    }
+
+    public function overwriteLTV()
+    {
+        return(null);
     }
 }
